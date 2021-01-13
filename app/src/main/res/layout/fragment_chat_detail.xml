@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F4"
+    tools:context=".ui.chats.ChatDetailFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/colorSlate"
+            android:clickable="true"
+            app:navigationIcon="@drawable/arrow_back_black_24dp"
+            app:popupTheme="@style/AppTheme">
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/reyclerview_message_list"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"></androidx.recyclerview.widget.RecyclerView>-->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        tools:layout_editor_absoluteX="4dp">
+
+        <LinearLayout
+            android:id="@+id/chatCardTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:clickable="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/ivChat1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/account_circle_24px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="Agent Name" />
+
+                    <TextView
+                        android:id="@+id/tvListingName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="123 Ang Mo Kio"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/meetingBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Arrange a Meeting"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/setSellerBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Set as Seller"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMeetingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Meeting has been scheduled at"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvMeetingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="29-10-2020 10:00"
+                android:textAlignment="center"
+                android:textColor="#2196F3"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/image_message_profile"-->
+        <!--                android:layout_width="32dp"-->
+        <!--                android:layout_height="32dp"-->
+        <!--                android:layout_marginLeft="8dp"-->
+        <!--                android:background="@drawable/account_circle_24px"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_name_incoming"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginLeft="8dp"-->
+        <!--                android:layout_marginTop="4dp"-->
+        <!--                android:text="John Doe"-->
+        <!--                android:textSize="12sp"-->
+        <!--                app:layout_constraintLeft_toRightOf="@+id/image_message_profile"-->
+        <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_body_incoming"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginLeft="8dp"-->
+        <!--                android:layout_marginTop="4dp"-->
+        <!--                android:background="@drawable/rounded_grey_box"-->
+        <!--                android:maxWidth="240dp"-->
+        <!--                android:padding="8dp"-->
+        <!--                android:text="hi man, how are you?"-->
+        <!--                android:textColor="#ffffff"-->
+        <!--                app:layout_constraintLeft_toRightOf="@+id/image_message_profile"-->
+        <!--                app:layout_constraintTop_toBottomOf="@+id/text_message_name_incoming" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_time_incoming"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginLeft="4dp"-->
+        <!--                android:text="11:40"-->
+        <!--                android:textSize="10sp"-->
+        <!--                app:layout_constraintBottom_toBottomOf="@+id/text_message_body_incoming"-->
+        <!--                app:layout_constraintLeft_toRightOf="@+id/text_message_body_incoming" />-->
+
+
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_body_out"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginRight="8dp"-->
+        <!--                android:background="@drawable/rounded_blue_box"-->
+        <!--                android:maxWidth="240dp"-->
+        <!--                android:padding="8dp"-->
+        <!--                android:text="hello, hello!"-->
+        <!--                android:textColor="#ffffff"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_time_out"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginRight="4dp"-->
+        <!--                android:text="11:40"-->
+        <!--                android:textSize="10sp"-->
+        <!--                app:layout_constraintBottom_toBottomOf="@+id/text_message_body_out"-->
+        <!--                app:layout_constraintRight_toLeftOf="@+id/text_message_body_out" />-->
+
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/image_message_profile3"-->
+        <!--                android:layout_width="32dp"-->
+        <!--                android:layout_height="32dp"-->
+        <!--                android:background="@drawable/account_circle_24px"-->
+        <!--                app:layout_constraintTop_toTopOf="parent"-->
+        <!--                android:layout_marginLeft="8dp"-->
+        <!--                app:layout_constraintLeft_toLeftOf="parent" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_name3"-->
+        <!--                android:text="John Doe"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:textSize="12sp"-->
+        <!--                app:layout_constraintLeft_toRightOf="@+id/image_message_profile"-->
+        <!--                android:layout_marginLeft="8dp"-->
+        <!--                app:layout_constraintTop_toTopOf="parent"-->
+        <!--                android:layout_marginTop="4dp" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_body"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginLeft="8dp"-->
+        <!--                android:layout_marginTop="4dp"-->
+        <!--                android:background="@drawable/rounded_grey_box"-->
+        <!--                android:maxWidth="240dp"-->
+        <!--                android:padding="8dp"-->
+        <!--                android:text="hi man, how are you?"-->
+        <!--                android:textColor="#ffffff"-->
+        <!--                app:layout_constraintLeft_toRightOf="@+id/image_message_profile"-->
+        <!--                app:layout_constraintTop_toBottomOf="@+id/text_message_name" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_time"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginLeft="4dp"-->
+        <!--                android:text="11:40"-->
+        <!--                android:textSize="10sp"-->
+        <!--                app:layout_constraintBottom_toBottomOf="@+id/text_message_body"-->
+        <!--                app:layout_constraintLeft_toRightOf="@+id/text_message_body" />-->
+        <!--            android:textSize="10sp" />-->
+        <!--        </View>-->
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_body4"-->
+        <!--                android:text="hello, hello!"-->
+        <!--                android:background="@drawable/rounded_blue_box"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:maxWidth="240dp"-->
+        <!--                android:padding="8dp"-->
+        <!--                android:textColor="#ffffff"-->
+        <!--                android:layout_marginRight="8dp"-->
+        <!--                app:layout_constraintRight_toRightOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/text_message_time4"-->
+        <!--                android:text="11:40"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:textSize="10sp"-->
+        <!--                android:layout_marginRight="4dp"-->
+        <!--                app:layout_constraintBottom_toBottomOf="@+id/text_message_body"-->
+        <!--                app:layout_constraintRight_toLeftOf="@+id/text_message_body" />-->
+        <!--        </View>-->
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/msg_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:nestedScrollingEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/layout_chatbox"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:reverseLayout="true" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#dfdfdf"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_chatbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/etChatBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Enter message"
+            android:maxLines="6"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="SEND"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fillViewport="true"-->
+    <!--        app:layout_constraintHeight_min="wrap"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/appBarLayout"-->
+    <!--        tools:layout_editor_absoluteX="0dp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="25dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginRight="25dp"-->
+    <!--            android:layout_marginBottom="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <CheckedTextView-->
+    <!--                android:id="@+id/checkedTextView"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginBottom="20dp"-->
+    <!--                android:checkMark="@drawable/check_box_outline_blank_24px"-->
+    <!--                android:checkMarkTint="#4C4C4C"-->
+    <!--                android:checked="false"-->
+    <!--                android:clickable="true"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="D01 Boat Quay / Raffles Place / Marina"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--            <CheckedTextView-->
+    <!--                android:id="@+id/checkedTextView2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginBottom="20dp"-->
+    <!--                android:checkMark="@drawable/check_box_outline_blank_24px"-->
+    <!--                android:checkMarkTint="#4C4C4C"-->
+    <!--                android:checked="false"-->
+    <!--                android:clickable="true"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="D01 Boat Quay / Raffles Place / Marina"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </LinearLayout>-->
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/frameLayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="80dp"-->
+    <!--        android:padding="5dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/continueBtn"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            android:layout_marginRight="10dp"-->
+    <!--            android:background="#2196F3"-->
+    <!--            android:text="Continue"-->
+    <!--            android:textColor="#FFFFFF" />-->
+    <!--    </FrameLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home_help"
+        android:name="com.example.susspropertyapp.help.home.HomeHelpFragment"
+        android:label="Home Help"
+        tools:layout="@layout/fragment_home_help" />
+
+    <fragment
+        android:id="@+id/navigation_agents_help"
+        android:name="com.example.susspropertyapp.help.agents.AgentsHelpFragment"
+        android:label="Agents Help"
+        tools:layout="@layout/fragment_agents_help" />
+
+    <fragment
+        android:id="@+id/navigation_chats_help"
+        android:name="com.example.susspropertyapp.help.chats.ChatsHelpFragment"
+        android:label="Chats Help"
+        tools:layout="@layout/fragment_chats_help" />
+    <fragment
+        android:id="@+id/navigation_account_help"
+        android:name="com.example.susspropertyapp.help.account.AccountHelpFragment"
+        android:label="Account Help"
+        tools:layout="@layout/fragment_account_help" />
+    <fragment
+        android:id="@+id/navigation_loan_help"
+        android:name="com.example.susspropertyapp.help.loan.LoanHelpFragment"
+        android:label="Loan Help"
+        tools:layout="@layout/fragment_loan_help" />
+
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.susspropertyapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_home_search_list"
+            app:destination="@id/navigation_home_search_list"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_home_results"
+            app:destination="@id/navigation_home_results"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_home_help"
+            app:destination="@id/navigation_home_help" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home_search_list"
+        android:name="com.example.susspropertyapp.ui.home.HomeSearchListFragment"
+        android:label="@string/home_search"
+        tools:layout="@layout/fragment_home_search_list" >
+        <action
+            android:id="@+id/action_navigation_home_search_list_to_navigation_home_results"
+            app:destination="@id/navigation_home_results"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_home_results"
+        android:name="com.example.susspropertyapp.ui.home.HomeResultsFragment"
+        android:label="@string/home_results"
+        tools:layout="@layout/fragment_home_results" >
+        <action
+            android:id="@+id/action_navigation_home_results_to_navigation_property_detail"
+            app:destination="@id/navigation_property_detail"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_home_results_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_property_detail"
+        android:name="com.example.susspropertyapp.ui.home.PropertyDetailFragment"
+        android:label="@string/title_property_detail"
+        tools:layout="@layout/fragment_property_detail" >
+
+        <argument
+            android:name="propertyId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_navigation_property_detail_to_navigation_loan_property"
+            app:destination="@id/navigation_loan_property"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_property_detail_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_loan_property"
+        android:name="com.example.susspropertyapp.ui.home.PropertyLoanFragment"
+        android:label="Loan Property"
+        tools:layout="@layout/fragment_loan_property" />
+
+    <fragment
+        android:id="@+id/navigation_agents"
+        android:name="com.example.susspropertyapp.ui.agents.AgentsFragment"
+        android:label="@string/title_agents"
+        tools:layout="@layout/fragment_agents" >
+        <action
+            android:id="@+id/action_navigation_agents_to_navigation_agents_detail"
+            app:destination="@id/navigation_agents_detail" />
+        <action
+            android:id="@+id/action_navigation_agents_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_agents_to_navigation_agents_help"
+            app:destination="@id/navigation_agents_help" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_agents_detail"
+        android:name="com.example.susspropertyapp.ui.agents.AgentsDetailFragment"
+        android:label="Agents Detail"
+        tools:layout="@layout/fragment_agents_detail" >
+        <action
+            android:id="@+id/action_navigation_agents_detail_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_agents_detail_to_navigation_property_detail"
+            app:destination="@id/navigation_property_detail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_chats"
+        android:name="com.example.susspropertyapp.ui.chats.ChatOverviewFragment"
+        android:label="@string/title_chats"
+        tools:layout="@layout/fragment_chat_overview" >
+        <action
+            android:id="@+id/action_navigation_chats_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_chats_self"
+            app:destination="@id/navigation_chats" />
+        <action
+            android:id="@+id/action_navigation_chats_to_navigation_chats_help"
+            app:destination="@id/navigation_chats_help" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.susspropertyapp.ui.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_property_detail"
+            app:destination="@id/navigation_property_detail" />
+        <action
+            android:id="@+id/action_navigation_account_self"
+            app:destination="@id/navigation_account" />
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_account_help"
+            app:destination="@id/navigation_account_help" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_loan"
+        android:name="com.example.susspropertyapp.ui.loan.LoanFragment"
+        android:label="@string/title_loan"
+        tools:layout="@layout/fragment_loan" >
+        <action
+            android:id="@+id/action_navigation_loan_to_navigation_loan_help"
+            app:destination="@id/navigation_loan_help" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatDetailFragment"
+        android:name="com.example.susspropertyapp.ui.chats.ChatDetailFragment"
+        android:label="fragment_chat_detail"
+        tools:layout="@layout/fragment_chat_detail" >
+        <action
+            android:id="@+id/action_chatDetailFragment_to_navigation_chats"
+            app:destination="@id/navigation_chats" />
+    </fragment>
+
+
+</navigation>

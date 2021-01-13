@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80FFFFFF"
+    tools:context=".ui.account.NewListingActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/colorSlate"
+            android:clickable="true"
+            app:navigationIcon="@drawable/arrow_back_black_24dp"
+            app:popupTheme="@style/AppTheme">
+
+            <TextView
+                style="@style/toolBarText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="70dp"
+                android:gravity="center"
+                android:text="Add New Property" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintHeight_min="wrap"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Add Media"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/fl1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+
+                            <ImageButton
+                                android:id="@+id/imgBtn1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_box"
+                                android:minWidth="100dp"
+                                android:padding="35dp"
+                                android:scaleType="center"
+                                app:srcCompat="@drawable/add_black_24dp"
+                                app:tint="#402196F3" />
+
+                            <ImageButton
+                                android:id="@+id/imgBtn1del"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_white_circle"
+                                android:elevation="3dp"
+                                android:tint="#2196F3"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/close_white_18dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fl2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+
+                            <ImageButton
+                                android:id="@+id/imgBtn2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_box"
+                                android:minWidth="100dp"
+                                android:padding="35dp"
+                                android:scaleType="center"
+                                app:srcCompat="@drawable/add_black_24dp"
+                                app:tint="#402196F3" />
+
+                            <ImageButton
+                                android:id="@+id/imgBtn2del"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_white_circle"
+                                android:elevation="3dp"
+                                android:tint="#2196F3"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/close_white_18dp" />
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/fl3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+
+                            <ImageButton
+                                android:id="@+id/imgBtn3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_box"
+                                android:minWidth="100dp"
+                                android:padding="35dp"
+                                android:scaleType="center"
+                                app:srcCompat="@drawable/add_black_24dp"
+                                app:tint="#402196F3" />
+
+                            <ImageButton
+                                android:id="@+id/imgBtn3del"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_white_circle"
+                                android:elevation="3dp"
+                                android:tint="#2196F3"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/close_white_18dp" />
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/fl4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+                            <ImageButton
+                                android:id="@+id/imgBtn4"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_box"
+                                android:minWidth="100dp"
+                                android:padding="35dp"
+                                android:scaleType="center"
+                                app:srcCompat="@drawable/add_black_24dp"
+                                app:tint="#402196F3" />
+
+                            <ImageButton
+                                android:id="@+id/imgBtn4del"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_white_circle"
+                                android:elevation="3dp"
+                                android:tint="#2196F3"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/close_white_18dp" />
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/fl5"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+
+                            <ImageButton
+                                android:id="@+id/imgBtn5"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_box"
+                                android:minWidth="100dp"
+                                android:padding="35dp"
+                                android:scaleType="center"
+                                app:srcCompat="@drawable/add_black_24dp"
+                                app:tint="#402196F3" />
+
+                            <ImageButton
+                                android:id="@+id/imgBtn5del"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/rounded_white_circle"
+                                android:elevation="3dp"
+                                android:tint="#2196F3"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/close_white_18dp" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="25dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Title"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/border_box"
+                    android:elevation="2dp"
+                    android:ems="5"
+                    android:gravity="center|left"
+                    android:hint="e.g. Singapore University of Social Sciences"
+                    android:inputType="text|textCapWords"
+                    android:letterSpacing="0"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:textColorHint="#992196F3"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="25dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:id="@+id/Location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Address"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="280dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border_box"
+                        android:elevation="2dp"
+                        android:ems="5"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center|left"
+                        android:hint="e.g. 463 Clementi Rd, Singapore 599494"
+                        android:inputType="none"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:textColorHint="#992196F3"
+                        android:textSize="13sp" />
+
+                    <ImageButton
+                        android:id="@+id/mapBtn"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_button"
+                        android:clickable="true"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:tint="#FFFFFF"
+                        app:srcCompat="@android:drawable/ic_dialog_map" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Description"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_box"
+                    android:ems="10"
+                    android:gravity="start"
+                    android:hint="e.g. The Singapore University of Social Sciences is the sixth autonomous university in Singapore. Established in 2017, SUSS focuses on applied degree programmes primarily in the social sciences. In 2017, SUSS received its inaugural class of 2,137 graduates."
+                    android:inputType="text|textMultiLine"
+                    android:lineHeight="18sp"
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:padding="15dp"
+                    android:textColor="#4F4F4F"
+                    android:textColorHint="#C62196F3"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Housing Type"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpHousingType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/tbHsTypeHDB"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="HDB"
+                            android:textAllCaps="false"
+                            android:textOff="HDB"
+                            android:textOn="HDB"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbHsTypeCondo"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="Condominium"
+                            android:textAllCaps="false"
+                            android:textOff="Condominium"
+                            android:textOn="Condominium"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbHsTypeLanded"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="Landed"
+                            android:textAllCaps="false"
+                            android:textOff="Landed"
+                            android:textOn="Landed"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Bedrooms"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpBathrooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/tbBedStudio"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="Studio"
+                            android:textAllCaps="false"
+                            android:textOff="Studio"
+                            android:textOn="Studio"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBed1"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="1"
+                            android:textAllCaps="false"
+                            android:textOff="1"
+                            android:textOn="1"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBed2"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="2"
+                            android:textAllCaps="false"
+                            android:textOff="2"
+                            android:textOn="2"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBed3"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textOff="3"
+                            android:textOn="3"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBed4"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textOff="4"
+                            android:textOn="4"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBed5"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="5+"
+                            android:textAllCaps="false"
+                            android:textOff="5+"
+                            android:textOn="5+"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Bathrooms"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpBedrooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <ToggleButton
+                            android:id="@+id/tbBath1"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="1"
+                            android:textAllCaps="false"
+                            android:textOff="1"
+                            android:textOn="1"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBath2"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="2"
+                            android:textAllCaps="false"
+                            android:textOff="2"
+                            android:textOn="2"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBath3"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textOff="3"
+                            android:textOn="3"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBath4"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textOff="4"
+                            android:textOn="4"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBath5"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="5"
+                            android:textAllCaps="false"
+                            android:textOff="5"
+                            android:textOn="5"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbBath6"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="6"
+                            android:textAllCaps="false"
+                            android:textOff="6"
+                            android:textOn="6"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutItem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:text="Set Price"
+                            android:textAllCaps="true"
+                            android:textColor="#2196F3"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/border_box"
+                            android:elevation="2dp"
+                            android:ems="5"
+                            android:gravity="center|left"
+                            android:hint="e.g. 400000"
+                            android:inputType="numberDecimal"
+                            android:letterSpacing="0"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="#992196F3"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="bottom|center"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:text="Set Area (sqft)"
+                            android:textAllCaps="true"
+                            android:textColor="#2196F3"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/border_box"
+                            android:elevation="2dp"
+                            android:ems="5"
+                            android:gravity="center|left"
+                            android:hint="e.g. 750"
+                            android:inputType="numberDecimal"
+                            android:letterSpacing="0"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="#992196F3"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutItem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:text="Built Year"
+                            android:textAllCaps="true"
+                            android:textColor="#2196F3"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/border_box"
+                            android:elevation="2dp"
+                            android:ems="5"
+                            android:gravity="center|left"
+                            android:hint="e.g. 1995"
+                            android:inputType="numberDecimal"
+                            android:letterSpacing="0"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="#992196F3"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Tenure"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpTenure"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/tbTenure99"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="99-103 years"
+                            android:textAllCaps="false"
+                            android:textOff="99-103 years"
+                            android:textOn="99-103 years"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbTenure999"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="999 years"
+                            android:textAllCaps="false"
+                            android:textOff="999 years"
+                            android:textOn="999 years"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbTenureFreehold"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="Freehold"
+                            android:textAllCaps="false"
+                            android:textOff="Freehold"
+                            android:textOn="Freehold"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Property Status"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rGrpStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/tbStatusNew"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="New Launch"
+                            android:textAllCaps="false"
+                            android:textOff="New Launch"
+                            android:textOn="New Launch"
+                            android:textSize="13sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tbStatusResale"
+                            style="@style/toggleBtnNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:clickable="true"
+                            android:minWidth="20dip"
+                            android:text="Resale"
+                            android:textAllCaps="false"
+                            android:textOff="Resale"
+                            android:textOn="Resale"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutKeywords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutResults">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Keywords"
+                    android:textAllCaps="true"
+                    android:textColor="#2196F3"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etKeywords"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/border_box"
+                        android:elevation="2dp"
+                        android:ems="5"
+                        android:gravity="center|left"
+                        android:hint="e.g. Pool, Carpark, Corner Unit"
+                        android:inputType="text|textCapWords"
+                        android:letterSpacing="0"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:textColorHint="#992196F3"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_button"
+            android:text="Continue"
+            android:textColor="#FFFFFF" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

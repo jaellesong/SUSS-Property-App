@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/editProperty"
+        android:title="Edit Property"
+        android:contentDescription="Edit Property"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/markSold"
+        android:title="Mark as Sold"
+        android:contentDescription="Mark as Sold"
+        app:showAsAction="ifRoom" />
+</menu>

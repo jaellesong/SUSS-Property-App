@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.susspropertyapp.ui.home.HomeResultsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:theme="@style/AppTheme"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/colorSlate"
+            android:clickable="true"
+            app:menu="@menu/top_properties_menu"
+            app:navigationIcon="@drawable/arrow_back_black_24dp"
+            app:popupTheme="@style/AppTheme">
+
+            <TextView
+                style="@style/toolBarText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="Search Results" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvPropertySale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="20 PROPERTIES FOR SALE"
+                android:textStyle="bold" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listing_recycler_view"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/listingCardView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="1dp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    android:onClick="clickedCard">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="20dp"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imageProperty"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="216dp"-->
+<!--                                android:layout_marginBottom="10dp"-->
+<!--                                android:src="@drawable/sample_property_1" />-->
+
+<!--                        </FrameLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvTitle"-->
+<!--                                android:layout_width="300dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="123 Ang Mo Kio Ave 10"-->
+<!--                                android:textColor="@android:color/secondary_text_light"-->
+<!--                                android:textSize="14sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvTime"-->
+<!--                                android:layout_width="71dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="3hrs ago"-->
+<!--                                android:textAlignment="viewEnd"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvPrice"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="2dp"-->
+<!--                            android:text="S$ 390,000"-->
+<!--                            android:textColor="@android:color/secondary_text_light"-->
+<!--                            android:textSize="22sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvDetails"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="3dp"-->
+<!--                            android:layout_marginBottom="3dp"-->
+<!--                            android:text="3 Beds 2 Baths · 100 sqft · $352 psf · 3mins walk to MRT"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:gravity="center">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imageAgent"-->
+<!--                                android:layout_width="35dp"-->
+<!--                                android:layout_height="35dp"-->
+<!--                                android:src="@drawable/account_circle_24px" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvQuote"-->
+<!--                                android:layout_width="225dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="10dp"-->
+<!--                                android:layout_marginRight="10dp"-->
+<!--                                android:text="“Coffeeshop, opposite market and ammenities”"-->
+<!--                                android:textColor="@android:color/tab_indicator_text"-->
+<!--                                android:textSize="12sp" />-->
+
+<!--                            <Button-->
+<!--                                android:id="@+id/enquireBtn1"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="30dp"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:background="@drawable/rounded_button"-->
+<!--                                android:text="Enquire"-->
+<!--                                android:textColor="#FFFFFF"-->
+<!--                                android:textSize="10sp" />-->
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/listingCardView2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="1dp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    android:onClick="clickedCard">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_margin="20dp"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imageProperty2"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="216dp"-->
+<!--                                android:layout_marginBottom="10dp"-->
+<!--                                android:src="@drawable/sample_property_1" />-->
+
+<!--                        </FrameLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvTitle2"-->
+<!--                                android:layout_width="300dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="123 Ang Mo Kio Ave 10"-->
+<!--                                android:textColor="@android:color/secondary_text_light"-->
+<!--                                android:textSize="14sp"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvTime2"-->
+<!--                                android:layout_width="71dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="3hrs ago"-->
+<!--                                android:textAlignment="viewEnd"-->
+<!--                                android:textSize="12sp" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvPrice2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="2dp"-->
+<!--                            android:text="S$ 390,000"-->
+<!--                            android:textColor="@android:color/secondary_text_light"-->
+<!--                            android:textSize="22sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvDetails2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="3dp"-->
+<!--                            android:layout_marginBottom="3dp"-->
+<!--                            android:text="3 Beds 2 Baths · 100 sqft · $352 psf · 3mins walk to MRT"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/imageAgent2"-->
+<!--                                android:layout_width="35dp"-->
+<!--                                android:layout_height="35dp"-->
+<!--                                android:src="@drawable/account_circle_24px" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvQuote2"-->
+<!--                                android:layout_width="225dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="10dp"-->
+<!--                                android:layout_marginRight="10dp"-->
+<!--                                android:text="“Coffeeshop, opposite market and ammenities”"-->
+<!--                                android:textColor="@android:color/tab_indicator_text"-->
+<!--                                android:textSize="12sp" />-->
+
+<!--                            <Button-->
+<!--                                android:id="@+id/enquireBtn2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="30dp"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:background="@drawable/rounded_button"-->
+<!--                                android:text="Enquire"-->
+<!--                                android:textColor="#FFFFFF"-->
+<!--                                android:textSize="10sp" />-->
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--            </LinearLayout>-->
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

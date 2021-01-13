@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/loan"
+        android:icon="@drawable/calculate_black_24dp"
+        android:title="Calculate Loan"
+        android:contentDescription="Calculate Loan"
+        app:showAsAction="ifRoom" />
+
+</menu>

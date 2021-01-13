@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alert_dialog_title">Select Image Option</string>
+
+    <string-array name="image_options">
+    <item>Choose photo from gallery</item>
+    <item>Take picture with camera</item>
+    </string-array>
+</resources>

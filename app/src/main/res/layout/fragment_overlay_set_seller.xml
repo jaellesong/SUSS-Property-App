@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shadedOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#8D08263E"
+    android:clickable="true"
+    android:padding="20dp"
+    tools:context="com.example.susspropertyapp.ui.chats.OverlaySetSellerFragment">
+
+    <!--    <DatePicker-->
+    <!--        android:id="@+id/date_picker"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="4"-->
+    <!--        android:calendarViewShown="true"-->
+    <!--        android:spinnersShown="false"-->
+    <!--        tools:layout_editor_absoluteX="20dp"-->
+    <!--        tools:layout_editor_absoluteY="20dp" />-->
+
+    <!--    <TimePicker-->
+    <!--        android:id="@+id/time_picker"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="4"-->
+    <!--        tools:layout_editor_absoluteX="20dp"-->
+    <!--        tools:layout_editor_absoluteY="20dp" />-->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_white_box"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="SET AS SELLER"
+                android:textAlignment="center"
+                android:textColor="#2196F3"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/closeBtn"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|top"
+                android:background="#00FFFFFF"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/close_black_18dp"
+                android:tint="#A4A4A4" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CACACA" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Do you want to set this client as a Seller to an Existing or New Property?"
+            android:textAlignment="center"
+            android:textColor="#6A6A6A"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:id="@+id/existingPropertyBtn"
+                android:layout_width="125dp"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_button_grey"
+                android:text="Existing"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/newPropertyBtn"
+                android:layout_width="125dp"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_button"
+                android:text="New"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
